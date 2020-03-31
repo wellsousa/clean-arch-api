@@ -4,7 +4,7 @@
   "description": "Implentação de uma api com typescript seguindo os principios de clean archtecture",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest --watch"
   },
   "repository": {
     "type": "git",
