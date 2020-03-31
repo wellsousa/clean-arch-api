@@ -1,3 +1,4 @@
+const {HttpRequest, HttpResponse} = require('../protocols/Http')
 const {MissingParamError} = require('../errors/MissingParamError')
 
 SignUpController = {
