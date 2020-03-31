@@ -4,6 +4,7 @@
   "description": "Implentação de uma api com typescript seguindo os principios de clean archtecture",
   "main": "index.js",
   "scripts": {
+    "start": "node src/main/server.js",
     "test": "jest --watch"
   },
   "repository": {
@@ -20,5 +21,8 @@
   "devDependencies": {
     "git-commit-msg-linter": "^2.4.2",
     "jest": "^25.2.4"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
   }
 }

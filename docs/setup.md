@@ -21,3 +21,7 @@ npm install -D jest
         * test environment - node
         * coverage reports - yes
         * clear mocks - yes
+
+para instalar o express:
+
+npm install express
