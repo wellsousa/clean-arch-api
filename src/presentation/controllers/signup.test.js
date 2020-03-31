@@ -1,5 +1,5 @@
 const sut  = require('./SignUpController')
-const {MissingParamError} = require('../errors/missing-param-error') 
+const {MissingParamError} = require('../errors/MissingParamError') 
 
 describe('SignUp Controller', () => {
     test('Deve retornar 400 se nenhum nome for fornecido', () => {

@@ -1,4 +1,4 @@
-
+const {MissingParamError} = require('../errors/MissingParamError')
 
 SignUpController = {
     handle: function( httpRequest ){
@@ -6,14 +6,14 @@ SignUpController = {
         if(! httpRequest.body.name){
             return {
                 statusCode: 400,
-                body: new Error('Missing param: name')
+                body: new MissingParamError('name')
             }
         }
 
         if(! httpRequest.body.email){
             return{
                 statusCode: 400,
-                body: new Error('Missing param: email')
+                body: new MissingParamError('email')
             }
         }
 
