@@ -1,8 +1,9 @@
 const sut  = require('./SignUpController')
+const {MissingParamError} = require('../errors/missing-param-error') 
 
 describe('SignUp Controller', () => {
-    test('Should return 400 if no name is provided', () => {
-        //let sut = new SignUpController()
+    test('Deve retornar 400 se nenhum nome for fornecido', () => {
+        //sut = suite under test
         const httpRequest = {
             body: {
                 email: 'any_email@mail.com',
@@ -14,6 +15,6 @@ describe('SignUp Controller', () => {
         const httpResponse = sut.handle( httpRequest )
         
         expect(httpResponse.statusCode).toBe(400)
-        expect(httpResponse.body).toEqual(new Error('Missing param: name'))
+        expect(httpResponse.body).toEqual(new MissingParamError('name'))
     })
 })
