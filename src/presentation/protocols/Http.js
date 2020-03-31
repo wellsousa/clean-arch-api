@@ -1,7 +1,15 @@
 class HttpResponse{
     constructor(statusCode, body){
-        this.statusCode = statusCode
-        this.body = body
+        this._statusCode = statusCode
+        this._body = body
+    }
+
+    get statusCode(){
+        return this._statusCode
+    }
+
+    get body(){
+        return this._body
     }
 }
 
