@@ -4,13 +4,18 @@ const {badRequest} = require('../helpers/httpHelper')
 
 SignUpController = {
     handle: function( httpRequest ){
+        console.log(httpRequest)
 
-        const requiredFields = ['name', 'email']
+        if(! httpRequest.body.name){
+                return badRequest(new MissingParamError('name'))
+        }
 
-        for(const field of requiredFields){
-            if(! httpRequest.body[field]){
-                return badRequest(new MissingParamError(field))
-            }
+        if(! httpRequest.body.email){
+            return badRequest(new MissingParamError('email'))
+        }
+
+        if(! httpRequest.body.password){
+            return badRequest(new MissingParamError('password'))
         }
 
         return {statusCode: 200}
